@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "Patient.h"
+#import "Doctor.h"
+
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -17,6 +19,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    Patient *patient = [[Patient alloc] init];
+    patient.name = @"Roman";
+    patient.temperature = 36.5f;
+    
+    Patient *patient2 = [[Patient alloc] init];
+    patient2.name = @"Vasya";
+    patient2.temperature = 38.5f;
+    
+    Doctor *doctor = [[Doctor alloc] init];
+    patient.delegate = doctor;
+    patient2.delegate = doctor;
+    
+    NSLog(@"%@, are you ok? %@", patient.name, [patient howAreYou] ? @"Fine" : @"Bad");
+    NSLog(@"%@, are you ok? %@", patient2.name, [patient2 howAreYou] ? @"Fine" : @"Bad");
+    
     return YES;
 }
 
