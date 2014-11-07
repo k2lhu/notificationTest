@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		306A35801A09264A004979C2 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 306A357F1A09264A004979C2 /* Patient.m */; };
-		306A35831A092C2C004979C2 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 306A35821A092C2C004979C2 /* Doctor.m */; };
+		301558331A0D5F24003E1384 /* RRGovernment.m in Sources */ = {isa = PBXBuildFile; fileRef = 301558321A0D5F24003E1384 /* RRGovernment.m */; };
+		301558361A0D6EC2003E1384 /* RRDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 301558351A0D6EC2003E1384 /* RRDoctor.m */; };
 		3070543F19F93731009ECD8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3070543E19F93731009ECD8F /* main.m */; };
 		3070544219F93731009ECD8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3070544119F93731009ECD8F /* AppDelegate.m */; };
 		3070544519F93731009ECD8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3070544419F93731009ECD8F /* ViewController.m */; };
@@ -29,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		306A357E1A09264A004979C2 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
-		306A357F1A09264A004979C2 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
-		306A35811A092C2C004979C2 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
-		306A35821A092C2C004979C2 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		301558311A0D5F24003E1384 /* RRGovernment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRGovernment.h; sourceTree = "<group>"; };
+		301558321A0D5F24003E1384 /* RRGovernment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRGovernment.m; sourceTree = "<group>"; };
+		301558341A0D6EC2003E1384 /* RRDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRDoctor.h; sourceTree = "<group>"; };
+		301558351A0D6EC2003E1384 /* RRDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRDoctor.m; sourceTree = "<group>"; };
 		3070543919F93731009ECD8F /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3070543D19F93731009ECD8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3070543E19F93731009ECD8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,10 +87,10 @@
 		3070543B19F93731009ECD8F /* test */ = {
 			isa = PBXGroup;
 			children = (
-				306A357E1A09264A004979C2 /* Patient.h */,
-				306A357F1A09264A004979C2 /* Patient.m */,
-				306A35811A092C2C004979C2 /* Doctor.h */,
-				306A35821A092C2C004979C2 /* Doctor.m */,
+				301558341A0D6EC2003E1384 /* RRDoctor.h */,
+				301558351A0D6EC2003E1384 /* RRDoctor.m */,
+				301558311A0D5F24003E1384 /* RRGovernment.h */,
+				301558321A0D5F24003E1384 /* RRGovernment.m */,
 				3070544019F93731009ECD8F /* AppDelegate.h */,
 				3070544119F93731009ECD8F /* AppDelegate.m */,
 				3070544319F93731009ECD8F /* ViewController.h */,
@@ -173,6 +173,7 @@
 		3070543119F93731009ECD8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RR;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Rechich;
 				TargetAttributes = {
@@ -230,10 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3070544519F93731009ECD8F /* ViewController.m in Sources */,
-				306A35801A09264A004979C2 /* Patient.m in Sources */,
+				301558361A0D6EC2003E1384 /* RRDoctor.m in Sources */,
 				3070544219F93731009ECD8F /* AppDelegate.m in Sources */,
+				301558331A0D5F24003E1384 /* RRGovernment.m in Sources */,
 				3070543F19F93731009ECD8F /* main.m in Sources */,
-				306A35831A092C2C004979C2 /* Doctor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

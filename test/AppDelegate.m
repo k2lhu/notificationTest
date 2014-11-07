@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "Patient.h"
-#import "Doctor.h"
-
+#import "RRGovernment.h"
+#import "RRDoctor.h"
 
 @interface AppDelegate ()
+@property (strong, nonatomic) RRGovernment *government;
 @end
 
 @implementation AppDelegate
@@ -20,22 +20,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    Patient *patient = [[Patient alloc] init];
-    patient.name = @"Roman";
-    patient.temperature = 36.5f;
+    self.government = [[RRGovernment alloc] init];
     
-    Patient *patient2 = [[Patient alloc] init];
-    patient2.name = @"Vasya";
-    patient2.temperature = 38.5f;
     
-    Doctor *doctor = [[Doctor alloc] init];
-    patient.delegate = doctor;
-    patient2.delegate = doctor;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(governmentNotification:)
+                                                 name:RRGovernmentPensionDidChangeNotification
+                                               object:nil];
     
-    NSLog(@"%@, are you ok? %@", patient.name, [patient howAreYou] ? @"Fine" : @"Bad");
-    NSLog(@"%@, are you ok? %@", patient2.name, [patient2 howAreYou] ? @"Fine" : @"Bad");
+    
+    self.government.taxLevel = 5.5;
+    self.government.salary = 1100;
+    self.government.averagePrice = 15;
+    self.government.pension = 550;
+    
+    RRDoctor *doctor = [[RRDoctor alloc] init];
+//    RRDoctor *doctor1 = [[RRDoctor alloc] init];
+    doctor.salary = /*doctor1.salary*/ self.government.salary;
+    
+    self.government.salary = 900;
+    self.government.salary = 2000;
     
     return YES;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)governmentNotification:(NSNotification *)notification {
+    NSLog(@"govermentNotification userInfo = %@", notification.userInfo);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
